@@ -48,16 +48,9 @@
         </div>
       </div>
       <div class="concept-photo">
-        <img src="assets/images/adriyaly.png" alt="Aly &amp; Adri — NODE Creative Lab" loading="lazy">
+        <img src="assets/images/Adriyaly.png" alt="Aly &amp; Adri — NODE Creative Lab" loading="lazy">
       </div>
     </div>
-  </section>
-
-  <!-- MANIFESTO PULL QUOTE -->
-  <section class="section-pull-quote">
-    <blockquote>
-      Most brands get built backwards. They design before they have clarity. They post before they have direction. They grow before they have a system that holds the growth.
-    </blockquote>
   </section>
 
   <!-- WHY A LAB -->
@@ -172,36 +165,40 @@
       <div class="contact-2col">
         <div class="contact-col">
           <h2>Let's read<br>Your Brand</h2>
-          <form class="contact-form" style="grid-template-columns: 1fr;">
+          <form class="contact-form" id="contact-form-about" action="https://formspree.io/f/xlgazkqe" method="POST" style="grid-template-columns: 1fr;">
+            <input type="hidden" name="_subject" value="New project enquiry — NODE Creative Lab">
             <div class="form-group full">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name">
+              <label for="name-a">Name</label>
+              <input type="text" id="name-a" name="name" placeholder="Your name" autocomplete="name" required>
             </div>
             <div class="form-group full">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email">
+              <label for="email-a">Email</label>
+              <input type="email" id="email-a" name="email" placeholder="your@email.com" autocomplete="email" required>
             </div>
             <div class="form-group full">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" placeholder="+61 ...">
+              <label for="phone-a">Phone Number</label>
+              <input type="tel" id="phone-a" name="phone" placeholder="+61 ...">
             </div>
             <div class="form-group full">
-              <label for="brand">Brand</label>
-              <input type="text" id="brand" name="brand" placeholder="Your brand name">
+              <label for="brand-a">Brand</label>
+              <input type="text" id="brand-a" name="brand" placeholder="Your brand name">
             </div>
             <div class="form-group full">
               <label>What are you looking for?</label>
               <div class="form-checks">
-                <label class="form-check"><input type="checkbox" name="service" value="lab-session"><span>Lab Session</span></label>
-                <label class="form-check"><input type="checkbox" name="service" value="branding"><span>Branding</span></label>
-                <label class="form-check"><input type="checkbox" name="service" value="visual-production"><span>Visual Production</span></label>
-                <label class="form-check"><input type="checkbox" name="service" value="content"><span>Content Creation</span></label>
-                <label class="form-check"><input type="checkbox" name="service" value="special"><span>Special Projects</span></label>
-                <label class="form-check"><input type="checkbox" name="service" value="other"><span>Not sure yet</span></label>
+                <label class="form-check"><input type="checkbox" name="service" value="Lab Session"><span>Lab Session</span></label>
+                <label class="form-check"><input type="checkbox" name="service" value="Branding"><span>Branding</span></label>
+                <label class="form-check"><input type="checkbox" name="service" value="Visual Production"><span>Visual Production</span></label>
+                <label class="form-check"><input type="checkbox" name="service" value="Content Creation"><span>Content Creation</span></label>
+                <label class="form-check"><input type="checkbox" name="service" value="Special Projects"><span>Special Projects</span></label>
+                <label class="form-check"><input type="checkbox" name="service" value="Not sure yet"><span>Not sure yet</span></label>
               </div>
             </div>
             <div class="form-submit">
-              <button type="submit" class="btn-primary">Send →</button>
+              <button type="submit" class="btn-primary" id="form-btn-about">Send →</button>
+            </div>
+            <div class="form-success" id="form-success-about" style="display:none;">
+              <p>[ Message received_ ]<br>We'll be in touch soon.</p>
             </div>
           </form>
         </div>
@@ -238,6 +235,36 @@
     document.addEventListener('click', (e) => {
       if (!document.getElementById('main-nav').contains(e.target)) links.classList.remove('open');
     });
+
+    // Contact form — Formspree AJAX
+    const contactFormAbout = document.getElementById('contact-form-about');
+    const formBtnAbout     = document.getElementById('form-btn-about');
+    const formSuccessAbout = document.getElementById('form-success-about');
+    if (contactFormAbout) {
+      contactFormAbout.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        formBtnAbout.textContent = 'Sending…';
+        formBtnAbout.disabled = true;
+        const data = new FormData(contactFormAbout);
+        try {
+          const res = await fetch(contactFormAbout.action, {
+            method: 'POST', body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+          if (res.ok) {
+            contactFormAbout.reset();
+            formBtnAbout.style.display = 'none';
+            formSuccessAbout.style.display = 'block';
+          } else {
+            formBtnAbout.textContent = 'Something went wrong. Try again →';
+            formBtnAbout.disabled = false;
+          }
+        } catch (err) {
+          formBtnAbout.textContent = 'Connection error. Try again →';
+          formBtnAbout.disabled = false;
+        }
+      });
+    }
   </script>
 
 </body>
