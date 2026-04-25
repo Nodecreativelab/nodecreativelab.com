@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work — NODE Creative Lab</title>
+  <meta name="description" content="Selected work from NODE Creative Lab. Brand strategy, visual identity, content creation and special projects for established businesses in Australia.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Work page specific overrides */
+    .work-page-intro {
+      background: var(--off-white);
+      padding: 80px 40px 60px;
+    }
+    .work-page-intro .section-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 40px;
+    }
+    .work-page-intro h2 {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(32px, 4vw, 52px);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      max-width: 480px;
+    }
+    .work-page-intro p {
+      font-family: var(--font-serif);
+      font-size: 16px;
+      line-height: 1.75;
+      color: rgba(33,63,61,0.6);
+      max-width: 340px;
+      font-style: italic;
+    }
+    .work-placeholder-note {
+      background: var(--crema);
+      padding: 60px 40px;
+      text-align: center;
+    }
+    .work-placeholder-note p {
+      font-family: var(--font-serif);
+      font-size: 17px;
+      line-height: 1.75;
+      color: rgba(33,63,61,0.6);
+      font-style: italic;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    @media (max-width: 768px) {
+      .work-page-intro { padding: 60px 24px 48px; }
+      .work-page-intro .section-inner { flex-direction: column; align-items: flex-start; }
+      .work-page-intro p { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="main-nav" class="scrolled">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html">
+        <img class="logo-nav" src="assets/images/logo-full.svg" alt="NODE Creative Lab">
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="work.html" class="active">Work</a></li>
+        <li><a class="nav-cta" href="index.html#contact">[ Start a project ]</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero">
+    <div class="page-hero-inner">
+      <span class="hero-tag">[ Selected Work ]</span>
+      <h1>Built in the lab.</h1>
+      <p class="page-hero-sub">Every project starts from what's actually true about the brand.</p>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <div class="work-page-intro">
+    <div class="section-inner">
+      <h2>The thinking behind the work.</h2>
+      <p>Each project is the result of studying the brand, diagnosing the gaps, and building toward the True Node.</p>
+    </div>
+  </div>
+
+  <!-- CONTENT CREATION — VIDEOS ON PAGE -->
+  <div class="section-cc">
+    <div class="cc-bar">
+      <span class="section-label light">Content Creation_</span>
+    </div>
+    <div class="cc-videos">
+      <div class="cc-video-wrap">
+        <div style="padding:75% 0 0 0;position:relative;">
+          <iframe src="https://player.vimeo.com/video/1186472141?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="krepe-reel"></iframe>
+        </div>
+      </div>
+      <div class="cc-video-wrap">
+        <div style="padding:177.78% 0 0 0;position:relative;">
+          <iframe src="https://player.vimeo.com/video/1186472147?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="pickleball"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="cc-still">
+      <img src="assets/images/Work/content-creation/content-creation.jpg" alt="" loading="lazy">
+    </div>
+  </div>
+
+  <!-- WORK GRID -->
+  <div class="section-work">
+    <div class="wgrid">
+
+      <div class="wcard" data-project="cwa">
+        <div class="wcard-img"><img src="assets/images/Work/Branding/cwa-mockup.png" alt="" loading="lazy"></div>
+        <div class="wcard-label">Branding</div>
+      </div>
+
+      <div class="wcard" data-project="zoe">
+        <div class="wcard-img"><img src="assets/images/Work/Branding/zoe-cup.png" alt="" loading="lazy"></div>
+        <div class="wcard-label">Branding</div>
+      </div>
+
+      <div class="wcard" data-project="cravings">
+        <div class="wcard-img"><img src="assets/images/Work/Branding/cravings-box.png" alt="" loading="lazy"></div>
+        <div class="wcard-label">Branding</div>
+      </div>
+
+      <div class="wcard" data-project="woppy">
+        <div class="wcard-img"><img src="assets/images/Work/Branding/woppy-logo.png" alt="" loading="lazy"></div>
+        <div class="wcard-label">Branding</div>
+      </div>
+
+      <div class="wcard" data-project="wop">
+        <div class="wcard-img"><img src="assets/images/Work/wop-pendon.jpg" alt="" loading="lazy"></div>
+        <div class="wcard-label">Branding &amp; Print</div>
+      </div>
+
+      <div class="wcard" data-project="davidliz">
+        <div class="wcard-img"><img src="assets/images/Work/Branding/david-liz.png" alt="" loading="lazy"></div>
+        <div class="wcard-label">Branding</div>
+      </div>
+
+      <div class="wcard wcard-wide" data-project="coffee">
+        <div class="wcard-img"><img src="assets/images/Work/coffee-packing.jpg" alt="" loading="lazy"></div>
+        <div class="wcard-label">Visual Production</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="section-contact" id="contact">
+    <div class="section-inner">
+      <div class="contact-2col">
+        <div class="contact-col">
+          <h2>Let's read<br>Your Brand</h2>
+          <form class="contact-form" id="contact-form-work" action="https://formspree.io/f/xlgazkqe" method="POST" style="grid-template-columns: 1fr;">
+            <input type="hidden" name="_subject" value="New project enquiry — NODE Creative Lab">
+            <div class="form-group full">
+              <label for="name-w">Name</label>
+              <input type="text" id="name-w" name="name" placeholder="Your name" autocomplete="name" required>
+            </div>
+            <div class="form-group full">
+              <label for="email-w">Email</label>
+              <input type="email" id="email-w" name="email" placeholder="your@email.com" autocomplete="email" required>
+            </div>
+            <div class="form-group full">
+              <label for="phone-w">Phone Number</label>
+              <input type="tel" id="phone-w" name="phone" placeholder="+61 ...">
+            </div>
+            <div class="form-group full">
+              <label for="brand-w">Brand</label>
+              <input type="text" id="brand-w" name="brand" placeholder="Your brand name">
+            </div>
+            <div class="form-group full">
+              <label>What are you looking for?</label>
+              <div class="form-checks">
+                <label class="form-check"><input type="checkbox" name="service" value="Lab Session"><span>Lab Session</span></label>
+                <label class="form-check"><input type="checkbox" name="service" value="Branding"><span>Branding</span></label>
+                <label class="form-check"><input type="checkbox" name="service" value="Visual Production"><span>Visual Production</span></label>
+                <label class="form-check"><input type="checkbox" name="service" value="Content Creation"><span>Content Creation</span></label>
+                <label class="form-check"><input type="checkbox" name="service" value="Special Projects"><span>Special Projects</span></label>
+                <label class="form-check"><input type="checkbox" name="service" value="Not sure yet"><span>Not sure yet</span></label>
+              </div>
+            </div>
+            <div class="form-submit">
+              <button type="submit" class="btn-primary" id="form-btn-work">Send →</button>
+            </div>
+            <div class="form-success" id="form-success-work" style="display:none;">
+              <p>[ Message received_ ]<br>We'll be in touch soon.</p>
+            </div>
+          </form>
+        </div>
+        <div class="contact-image">
+          <img src="assets/images/founders-studio.jpg" alt="NODE Creative Lab" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img class="logo-footer" src="assets/images/logo-full.svg" alt="NODE Creative Lab">
+        <div class="footer-tagline">Find your true node.</div>
+      </div>
+      <div class="footer-right">
+        <ul class="footer-nav">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <p class="footer-copy">© 2026 NODE Creative Lab. Based in Australia.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <button class="lb-close" id="lb-close" aria-label="Close">×</button>
+    <div class="lb-media" id="lb-media"></div>
+    <div class="lb-footer">
+      <span class="lb-service" id="lb-service"></span>
+    </div>
+  </div>
+
+  <script>
+    // Nav
+    const toggle = document.getElementById('nav-toggle');
+    const links  = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+    document.addEventListener('click', (e) => {
+      if (!document.getElementById('main-nav').contains(e.target)) links.classList.remove('open');
+    });
+
+    // Project data
+    const PROJECTS = {
+      cwa: {
+        service: 'Branding',
+        images: [
+          'assets/images/Work/Branding/cwa-mockup.png',
+          'assets/images/Work/Branding/cwa-logo.png'
+        ]
+      },
+      zoe: {
+        service: 'Branding',
+        images: [
+          'assets/images/Work/Branding/zoe-cup.png',
+          'assets/images/Work/Branding/zoe-instagram.jpg',
+          'assets/images/Work/Branding/zoe-box.jpg'
+        ]
+      },
+      cravings: {
+        service: 'Branding',
+        images: [
+          'assets/images/Work/Branding/cravings-box.png',
+          'assets/images/Work/Branding/cravings-logo.png'
+        ]
+      },
+      woppy: {
+        service: 'Branding',
+        images: [
+          'assets/images/Work/Branding/woppy-bag.jpg',
+          'assets/images/Work/Branding/woppy-box.jpg',
+          'assets/images/Work/Branding/woppy-logo.png'
+        ]
+      },
+      wop: {
+        service: 'Branding & Print',
+        images: [
+          'assets/images/Work/wop-pendon.jpg',
+          'assets/images/Work/wop-brochure1.jpg',
+          'assets/images/Work/wop-brochure2.jpg'
+        ]
+      },
+      davidliz: {
+        service: 'Branding',
+        images: ['assets/images/Work/Branding/david-liz.png']
+      },
+      coffee: {
+        service: 'Visual Production',
+        images: ['assets/images/Work/coffee-packing.jpg']
+      }
+    };
+
+    const lb      = document.getElementById('lightbox');
+    const lbMedia = document.getElementById('lb-media');
+    const lbSvc   = document.getElementById('lb-service');
+
+    function openLb(key) {
+      const p = PROJECTS[key];
+      const n = p.images.length;
+      const cols = n === 1 ? 1 : n === 2 ? 2 : 3;
+      lbSvc.textContent = p.service;
+      lbMedia.innerHTML = p.images.map(src =>
+        `<div class="lb-item"><img src="${src}" alt=""></div>`
+      ).join('');
+      lbMedia.className = `lb-media lb-cols-${cols}`;
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLb() {
+      lb.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('lb-close').addEventListener('click', closeLb);
+    lb.addEventListener('click', (e) => { if (e.target === lb) closeLb(); });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lb.classList.contains('open')) closeLb();
+    });
+    document.querySelectorAll('.wcard').forEach(card => {
+      card.addEventListener('click', () => openLb(card.dataset.project));
+    });
+
+    // Contact form — Formspree AJAX
+    const contactFormWork = document.getElementById('contact-form-work');
+    const formBtnWork     = document.getElementById('form-btn-work');
+    const formSuccessWork = document.getElementById('form-success-work');
+
+    if (contactFormWork) {
+      contactFormWork.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        formBtnWork.textContent = 'Sending…';
+        formBtnWork.disabled = true;
+        const data = new FormData(contactFormWork);
+        try {
+          const res = await fetch(contactFormWork.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+          if (res.ok) {
+            contactFormWork.reset();
+            formBtnWork.style.display = 'none';
+            formSuccessWork.style.display = 'block';
+          } else {
+            formBtnWork.textContent = 'Something went wrong. Try again →';
+            formBtnWork.disabled = false;
+          }
+        } catch (err) {
+          formBtnWork.textContent = 'Connection error. Try again →';
+          formBtnWork.disabled = false;
+        }
+      });
+    }
+  </script>
+  <script src="https://player.vimeo.com/api/player.js"></script>
+
+</body>
+</html>
