@@ -16,22 +16,15 @@
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-    html, body {
+    /* html cubre cualquier espacio extra fuera de .page en móvil */
+    html {
       min-height: 100%;
-      height: 100%;
-      background-color: #243d32;
+      background: #243d32 url('assets/Background.png') no-repeat center top / cover;
     }
 
-    /* Fixed background — cubre todo el viewport en desktop y móvil */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      background-image: url('assets/Background.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+    body {
+      min-height: 100%;
+      background: transparent;
     }
 
     /* ─── Page ──────────────────────────────────────────── */
@@ -40,7 +33,7 @@
       min-height: 100dvh;
       max-width: 430px;
       margin: 0 auto;
-      background: transparent;
+      background: #243d32 url('assets/Background.png') no-repeat center top / cover;
       overflow: hidden;
       display: flex;
       flex-direction: column;
